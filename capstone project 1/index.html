@@ -16,12 +16,12 @@
         <!-- Inside the form element, you are required to enter your name in an input 
             field that has an id of name and a type of text -->
         <label id="name-label">Name</label>
-        <input id="name" type="text" placeholder="Enter your name">
+        <input id="name" type="text" placeholder="Enter your name" required>
 
         <!-- Inside the form element, you are required to enter your email in an input 
             field that has an id of email -->
         <label id="email-label">Email</label>
-        <input id="email" type="email" placeholder="Enter your Email">
+        <input id="email" type="email" placeholder="Enter your Email" required>
 
         <!-- Inside the form, you can enter a number in an input field that has an id of number -->
         <label id="number-label">Age </label><p>(optional)</p>
@@ -31,11 +31,35 @@
         <!-- Inside the form element, you should have a select dropdown element with an id 
             of dropdown and at least two options to choose from -->
         <label>Which option best describes your current role?</label>
-        <select>
-            <option value="">(pick one)</option>
-            <option value="">Facebook</option>
-            <option value="">Google</option>
+        <select id="dropdown">
+            <option value="0">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Full Time Learner</option>
+            <option value="4">Prefer not to say</option>
+            <option value="5">Others</option>
         </select>
+
+        <!-- Inside the form element, you can select an option from a group of at least
+             two radio buttons that are grouped using the name attribute -->
+        <label>Would you recommend freeCodeCamp to a friend?</label>
+        <label><input name="radio_select1_only" type="radio" value="radio1">Definitely</label>
+        <label><input name="radio_select1_only" type="radio" value="radio2">Maybe</label>
+        <label><input name="radio_select1_only" type="radio" value="radio3">No</label>
+
+        <!-- Inside the form element, you can select several fields from a series of 
+            checkboxes, each of which must have a value attribute -->
+            <label>What would you like to see improved? (check all that apply)</label>
+            <label><input  type="checkbox" value="cb1">Front-end Projects</label>
+            <label><input  type="checkbox" value="cb2">Back-end Projects</label>
+            <label><input  type="checkbox" value="cb3">Data Visualization</label>
+            <label><input  type="checkbox" value="cb4">Challenges</label>
+        <!-- Inside the form element, you are presented with a textarea for additional comments -->
+        <label>Any comments or suggestions?<textarea placeholder="Enter your comment here..."></textarea></label>
+
+        <!-- Inside the form element, you are presented with a button with id of 
+            submit to submit all the inputs -->
+        <input type="submit" value="Submit" id="submit">
 
 
     </form>
