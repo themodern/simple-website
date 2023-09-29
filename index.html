@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sample Registration Form</title>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <p>fill out the form to complete the survey</p>
+    <form method="post" action="www.domain.com">
+    <!-- fieldset #1 -->
+    <!-- Basic information -->
+    <fieldset>
+        <label for="username">Name :<input required type="text" name="username" id="username" value="enter your username">
+        </label>
+<!--         
+        <label>Gender: </label>
+        <label><input type="radio"> Male
+        </label> <label><input type="radio"> Female
+        </label> -->
+        
+        <label for="email">Email :<input required type="email" id="email" name="email" value="enter your email">
+        </label>
+        
+        <!-- pattern is regular expression, must have upper case, lower case and number with min length of 8 -->
+        <label for="password">Password :<input required type="password" name="password" pattern="[a-zA-Z0-9]{8,}" id="password" >
+        </label>
+    </fieldset>
+
+    <!-- fieldset #2 -->
+    <p>selective items</p>
+    <fieldset>
+        <p>This set of radio button can select <strong>both</strong>, because the input does not specify having the same name</p>
+        <label><input type="radio" name="radio1">Radio button 1</label>
+        <label><input type="radio" name="radio2">Radio button 2</label>
+
+        <p>This set of radio button can select <strong>one</strong>, because the input have the <strong>same name</strong></p>
+        <label><input name="radio_select1_only" type="radio" >Radio button 1 select 1 only</label>
+        <label><input name="radio_select1_only" type="radio" >Radio button 2 select 1 only</label>
+
+        <p>This is a check box with a link</p>
+        <label><input type="checkbox">accept the <a href="www.domain.com">terms and condition</a>
+        </label>
+    </fieldset>
+    <!-- fieldset #3 -->
+    
+    <fieldset>
+        <label>Profile Picture<input type="file"></label>
+        <label>How do you hear about us?
+            <select>
+                <option value="0">(pick one)</option>
+                <option value="1">Facebook</option>
+                <option value="2">Google</option>
+            </select>
+        </label>
+
+        <label>Comment
+            <textarea placeholder="Hello World"></textarea>
+        </label>
+
+        
+    </fieldset>
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
